@@ -1,0 +1,447 @@
+{
+  "schema_name": "irap_image_annotation_schema",
+  "schema_version": "1.0",
+  "source": "iRAP Coding Manual - Drive on the left edition",
+  "unit_of_annotation": "single image or image sequence representing a road segment",
+  "notes": {
+    "visibility_levels": ["direct", "partial", "not_image_only"],
+    "recommended_labels_for_vlm": "Use direct + partial fields for image-based training. Keep not_image_only fields optional or null unless external metadata is available."
+  },
+  "fields": [
+    {
+      "id": "image_id",
+      "category": "metadata",
+      "type": "string",
+      "observable_from_image": false,
+      "description": "Unique image/sample ID"
+    },
+    {
+      "id": "image_path",
+      "category": "metadata",
+      "type": "string",
+      "observable_from_image": false,
+      "description": "Path or URL to image"
+    },
+    {
+      "id": "motorcycle_observed",
+      "category": "observed_flow",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        { "label": "0"},
+        { "label": "1"},
+        { "label": "2_3"},
+        { "label": "4_5"},
+        { "label": "6_7"},
+        { "label": "gt_8"}
+      ]
+    },
+    {
+      "id": "bicycle_observed",
+      "category": "observed_flow",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        { "label": "0"},
+        { "label": "1"},
+        { "label": "2_3"},
+        { "label": "4_5"},
+        { "label": "6_7"},
+        { "label": "gt_8"}
+      ]
+    },
+    {
+      "id": "ped_observed",
+      "category": "observed_flow",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        { "label": "0"},
+        { "label": "1"},
+        { "label": "2_3"},
+        { "label": "4_5"},
+        { "label": "6_7"},
+        { "label": "gt_8"}
+      ]
+    },
+    {
+      "id": "speed_sign_visible",
+      "category": "speed",
+      "type": "boolean",
+      "observable_from_image": true
+    },
+    {
+      "id": "speed_limit_general",
+      "category": "speed",
+      "type": "single_choice",
+      "observable_from_image": "partial",
+      "choices": [
+        { "label": "30_kmh"},
+        { "label": "40_kmh"},
+        { "label": "50_kmh"},
+        { "label": "60_kmh"},
+        { "label": "70_kmh"},
+        { "label": "80_kmh"},
+        { "label": "90_kmh"},
+        { "label": "100_kmh"},
+        { "label": "110_kmh"}
+      ]
+    },
+    {
+      "id": "speed_management_present",
+      "category": "speed",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        { "label": "not_present"},
+        { "label": "present"}
+      ]
+    },
+    {
+      "id": "number_of_lanes",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        { "label": "one_lane"},
+        { "label": "two_lanes"},
+        { "label": "three_lanes"},
+        { "label": "four_or_more_lanes"},
+        { "label": "two_and_one_lanes"},
+        { "label": "three_and_two_lanes"}
+      ]
+    },
+    {
+      "id": "curvature",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "straight",
+        "gentle_curve",
+        "moderate_curve",
+        "sharp_curve",
+        "very_sharp_curve",
+        "unknown"
+      ]
+    },
+    {
+      "id": "median_type",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "one_way",
+        "undivided",
+        "centre_line",
+        "wide_centre_line",
+        "central_hatching",
+        "continuous_central_turn_lane",
+        "flexible_posts",
+        "physical_median_lt_1m",
+        "physical_median_1_to_lt_5m",
+        "physical_median_ge_5m",
+        "safety_barrier",
+        "none",
+        "unknown"
+      ]
+    },
+    {
+      "id": "skid_resistance",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "good",
+        "moderate",
+        "poor",
+        "unknown"
+      ]
+    },
+    {
+      "id": "road_condition",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "good",
+        "moderate",
+        "poor",
+        "unknown"
+      ]
+    },
+    {
+      "id": "vehicle_parking",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "some",
+        "frequent",
+        "unknown"
+      ]
+    },
+    {
+      "id": "roadworks_present",
+      "category": "mid_block",
+      "type": "boolean",
+      "observable_from_image": true
+    },
+    {
+      "id": "delineation",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "good",
+        "moderate",
+        "poor",
+        "none",
+        "unknown"
+      ]
+    },
+    {
+      "id": "sight_distance",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "moderate",
+        "poor",
+        "unknown"
+      ]
+    },
+    {
+      "id": "street_lighting",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+    {
+      "id": "service_road",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+    {
+      "id": "centre_line_rumble_strips",
+      "category": "mid_block",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+
+    {
+      "id": "roadside_object",
+      "category": "roadside",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "safety_barrier",
+        "rigid_structure_building",
+        "tree",
+        "pole",
+        "ditch",
+        "cliff",
+        "wall",
+        "water",
+        "embankment",
+        "building",
+        "street_sign",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "shoulder_rumble_strips",
+      "category": "roadside",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+    {
+      "id": "paved_shoulder",
+      "category": "roadside",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+
+    {
+      "id": "intersection_type",
+      "category": "intersections",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "t_junction",
+        "cross_intersection",
+        "roundabout",
+        "signalised",
+        "grade_separated",
+        "merge_diverge",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "intersection_channelisation",
+      "category": "intersections",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+    {
+      "id": "property_access_points",
+      "category": "intersections",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "few",
+        "many",
+        "unknown"
+      ]
+    },
+    {
+      "id": "land_use_driver_side",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "undeveloped",
+        "agricultural",
+        "residential",
+        "commercial",
+        "industrial",
+        "school",
+        "mixed_use",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "land_use_passenger_side",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "undeveloped",
+        "agricultural",
+        "residential",
+        "commercial",
+        "industrial",
+        "school",
+        "mixed_use",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "area_type",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "rural",
+        "urban",
+        "peri_urban",
+        "unknown"
+      ]
+    },
+    {
+      "id": "ped_crossing_facility",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "marked_crossing",
+        "signalised_crossing",
+        "refuge_island",
+        "raised_crossing",
+        "curb_build_out",
+        "grade_separated_crossing",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "pedestrian_fencing",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    },
+    {
+      "id": "facilities_for_motorcycles",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "motorcycle_lane",
+        "segregated_motorcycle_path",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "facilities_for_bicycles",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "none",
+        "painted_bike_lane",
+        "separated_bike_lane",
+        "shared_path",
+        "other",
+        "unknown"
+      ]
+    },
+    {
+      "id": "school_zone_warning",
+      "category": "land_use",
+      "type": "single_choice",
+      "observable_from_image": true,
+      "choices": [
+        "present",
+        "not_present",
+        "unknown"
+      ]
+    }
+  ]
+}
