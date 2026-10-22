@@ -1,0 +1,212 @@
+{
+  "area_type": [
+    "peri_urban",
+    "rural",
+    "unknown",
+    "urban"
+  ],
+  "bicycle_observed": [
+    "0",
+    "1"
+  ],
+  "centre_line_rumble_strips": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "curvature": [
+    "gentle_curve",
+    "moderate_curve",
+    "sharp_curve",
+    "straight",
+    "very_sharp_curve"
+  ],
+  "delineation": [
+    "good",
+    "moderate",
+    "none",
+    "poor",
+    "unknown"
+  ],
+  "facilities_for_bicycles": [
+    "none",
+    "painted_bike_lane",
+    "separated_bike_lane",
+    "shared_path",
+    "unknown"
+  ],
+  "facilities_for_motorcycles": [
+    "motorcycle_lane",
+    "none"
+  ],
+  "intersection_channelisation": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "intersection_type": [
+    "cross_intersection",
+    "merge_diverge",
+    "none",
+    "other",
+    "roundabout",
+    "signalised",
+    "t_junction",
+    "unknown"
+  ],
+  "land_use_driver_side": [
+    "agricultural",
+    "commercial",
+    "industrial",
+    "mixed_use",
+    "other",
+    "residential",
+    "school",
+    "undeveloped",
+    "unknown"
+  ],
+  "land_use_passenger_side": [
+    "agricultural",
+    "commercial",
+    "industrial",
+    "mixed_use",
+    "other",
+    "residential",
+    "school",
+    "undeveloped",
+    "unknown"
+  ],
+  "median_type": [
+    "centre_line",
+    "continuous_central_turn_lane",
+    "flexible_posts",
+    "none",
+    "one_way",
+    "physical_median_1_to_lt_5m",
+    "physical_median_ge_5m",
+    "physical_median_lt_1m",
+    "undivided",
+    "unknown",
+    "wide_centre_line"
+  ],
+  "motorcycle_observed": [
+    "0",
+    "1"
+  ],
+  "number_of_lanes": [
+    "four_or_more_lanes",
+    "one_lane",
+    "three_and_two_lanes",
+    "three_lanes",
+    "two_and_one_lanes",
+    "two_lanes"
+  ],
+  "paved_shoulder": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "ped_crossing_facility": [
+    "curb_build_out",
+    "grade_separated_crossing",
+    "marked_crossing",
+    "none",
+    "other",
+    "raised_crossing",
+    "refuge_island",
+    "signalised_crossing"
+  ],
+  "ped_observed": [
+    "0",
+    "1",
+    "2_3",
+    "4_5"
+  ],
+  "pedestrian_fencing": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "property_access_points": [
+    "few",
+    "many",
+    "none"
+  ],
+  "road_condition": [
+    "good",
+    "moderate",
+    "poor"
+  ],
+  "roadside_object": [
+    "building",
+    "cliff",
+    "ditch",
+    "embankment",
+    "none",
+    "other",
+    "pole",
+    "rigid_structure_building",
+    "safety_barrier",
+    "street_sign",
+    "tree",
+    "unknown",
+    "water"
+  ],
+  "roadworks_present": [
+    "True",
+    "false",
+    "true"
+  ],
+  "school_zone_warning": [
+    "not_present",
+    "present"
+  ],
+  "service_road": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "shoulder_rumble_strips": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "sight_distance": [
+    "moderate",
+    "poor"
+  ],
+  "skid_resistance": [
+    "good",
+    "moderate",
+    "poor",
+    "unknown"
+  ],
+  "speed_limit_general": [
+    "100_kmh",
+    "110_kmh",
+    "40_kmh",
+    "50_kmh",
+    "60_kmh",
+    "70_kmh",
+    "80_kmh"
+  ],
+  "speed_management_present": [
+    "not_present",
+    "present"
+  ],
+  "speed_sign_visible": [
+    "false",
+    "true"
+  ],
+  "street_lighting": [
+    "not_present",
+    "present",
+    "unknown"
+  ],
+  "vehicle_parking": [
+    "frequent",
+    "none",
+    "some",
+    "unknown"
+  ]
+}

@@ -125,6 +125,12 @@ security practices.
 
 ------------------------------------------------------------------------
 
+## Model Training and Evaluation
+
+The [`Models/`](Models/) directory contains training, testing and evaluation scripts for Qwen2.5-VL, Janus-Pro and a VGG16 baseline. See **[Models/README.md](Models/README.md)** for setup, commands and experiment details.
+
+---
+
 ## Annotation Schema
 
 The annotation schema is:
@@ -235,7 +241,7 @@ the retrieval utility.
 Run:
 
 ``` bash
-python Image_Retrieval.py
+python Image_Retrival.py
 ```
 
 The program asks how many images should be collected.
